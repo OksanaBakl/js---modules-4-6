@@ -562,6 +562,140 @@
 
 //============================== task32 ====================================
 // Пиши код ниже этой строки
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// const calculateTotalBalance = users => {
+//   return users.reduce((total, user) => total + user.balance, 0);
+// };
+// console.log(calculateTotalBalance);
+// Пиши код выше этой строки
+
+//============================== task33 ====================================
+// const getTotalFriendCount = users => {
+//   return users.reduce((acc, user) => acc + user.friends.length, 0);
+// };
+// console.log(getTotalFriendCount);
+// const getTotalFriendCount = users => {
+//   return users.reduce((acc, user) => acc + user.friends.length, 0);
+// };
+
+//============================== task34 ====================================
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский',
+// ];
+// // Пиши код ниже этой строки
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+//============================== task36 ====================================
+
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский',
+//   'Говард Лавкрафт',
+// ];
+// // Пиши код ниже этой строки
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+// console.log(authorsInAlphabetOrder);
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+//============================== task37 ====================================
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 },
+// ];
+// // Пиши код ниже этой строки
+
+// const sortedByAuthorName = [...books].sort((a, b) =>
+//   a.author.localeCompare(b.author),
+// );
+
+// const sortedByReversedAuthorName = [...books].sort((a, b) =>
+//   b.author.localeCompare(a.author),
+// );
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+
+// console.log(sortedByDescentingRating);
+
 const users = [
   {
     name: 'Moore Hensley',
@@ -627,17 +761,150 @@ const users = [
     gender: 'female',
   },
 ];
-const calculateTotalBalance = users => {
-  return users.reduce((total, user) => total + user.balance, 0);
-};
-console.log(calculateTotalBalance);
-// Пиши код выше этой строки
 
-//============================== task33 ====================================
-const getTotalFriendCount = users => {
-  return users.reduce((acc, user) => acc + user.friends.length, 0);
+//============================== task38 ====================================
+
+// Пиши код ниже этой строки
+// Дополни функцию sortByAscendingBalance(users) так,
+// чтобы она возвращала массив пользователей отсортированный по возрастанию их баланса(свойство balance).
+// const sortByAscendingBalance = users => {
+//   return users.sort((a, b) => a.balance - b.balance);
+// };
+// // Пиши код выше этой строки
+// console.log(sortByAscendingBalance(users));
+
+//============================== task39 ====================================
+// Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей
+// отсортированный по убыванию количества их друзей(свойство friends).
+// // Пиши код ниже этой строки
+// const sortByDescendingFriendCount = users => {
+//     return [...users].sort(
+//       (curUser, nextUser) => nextUser.friends.length - curUser.friends.length,
+//     );
+// };
+// // Пиши код выше этой строки
+// console.log(sortByDescendingFriendCount(users));
+
+//============================== task40 ====================================
+// Пиши код ниже этой строки
+// const sortByName = users => {
+//   return [...users].sort((a, b) => a.name.localeCompare(b.name));
+// };
+// // Пиши код выше этой строки
+// console.log(sortByName(users));
+
+//============================== task41 ====================================
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+//   { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Пиши код ниже этой строки
+// const names = [...books]
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .sort((a, b) => a.localeCompare(b));
+// console.log(names);
+
+//============================== task42 ====================================
+// Пиши код ниже этой строки
+// const getNamesSortedByFriendCount = users => {
+//   return [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map(user => user.name);
+// };
+// console.log(getNamesSortedByFriendCount(users));
+
+//============================== task43 ====================================
+// Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей
+//   (свойство friends) отсортированный по алфавиту.
+
+// const getSortedFriends = users => {
+//   return [...users]
+//     .flatMap(user => user.friends)
+
+//     .sort((a, b) => a.localeCompare(b))
+//     .filter((value, idx, arr) => arr.indexOf(value) === idx);
+// };
+// console.log(getSortedFriends(users));
+
+// const numbers = [1, 1, 1, 2, 2, 3, 3, 3, 4, 5, 5];
+
+// const uniqueValues = numbers.filter(
+//   (value, idx, arr) => arr.indexOf(value) === idx,
+// );
+
+// console.log(uniqueValues);
+
+//============================== task44 ====================================
+
+// Пиши код ниже этой строки
+const getTotalBalanceByGender = (users, gender) => {
+  return [...users]
+    .filter(itemOf => itemOf.gender == gender)
+    .reduce((summ, itemOf) => summ + itemOf.balance, 0);
 };
-console.log(getTotalFriendCount);
-const getTotalFriendCount = users => {
-  return users.reduce((acc, user) => acc + user.friends.length, 0);
-};
+// Пиши код выше этой строки
+console.log(getTotalBalanceByGender(users, 'female'));
+
+// // Получить массив имен пользователей по полу (поле gender).
+// const getUsersWithGender = (users, gender) =>
+//   users.filter(itemOf => itemOf.gender == gender).map(itemOf => itemOf.name);
+// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// const calculateTotalBalance = users =>
+//   users.reduce((summ, itemOf) => summ + itemOf.balance, 0);
+// console.log(calculateTotalBalance(users)); // 20916
+
+// // Получить массив имен всех пользователей (поле name).
+// const getUserNames = users => users.map(itemOf => itemOf.name);
+// console.log(getUserNames(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+
+// // Получить массив объектов пользователей по цвету глаз (поле eyeColor).
+// const getUsersWithEyeColor = (users, color) => users.filter(itemOf => color == itemOf.eyeColor);
+// console.log(getUsersWithEyeColor(users, 'blue'));
+// // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+
+// // Получить массив имен пользователей по полу (поле gender).
+// const getUsersWithGender = (users, gender) => users.filter(itemOf => itemOf.gender == gender).map(itemOf => itemOf.name);
+// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
+// // Получить массив только неактивных пользователей (поле isActive).
+// const getInactiveUsers = users => users.filter(itemOf => !itemOf.isActive);
+// console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
+
+// // Получить пользоваля (не массив) по email (поле email, он уникальный).
+// const getUserWithEmail = (users, email) => users.find(itemOf => itemOf.email);
+// console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
+// console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
+
+// // Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
+// const getUsersWithAge = (users, min, max) => users.filter(itemOf => itemOf.age > min && itemOf.age < max);
+// console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
+// console.log(getUsersWithAge(users, 30, 40));
+// // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
+
+// // Получить общую сумму баланса (поле balance) всех пользователей.
+// const calculateTotalBalance = users => users.reduce((summ, itemOf) => summ + itemOf.balance, 0)
+// console.log(calculateTotalBalance(users)); // 20916
+
+// // Массив имен всех пользователей у которых есть друг с указанным именем.
+// const getUsersWithFriend = (users, friendName) => users.filter(itemOf => itemOf.friends.includes(friendName)).map(itemOf => itemOf.name);
+// console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+// // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
+// const getNamesSortedByFriendsCount = users => users.sort((itemOfOne, itemOfTwo) => itemOfOne.friends.length - itemOfTwo.friends.length).map(itemOf => itemOf.name);
+// console.log(getNamesSortedByFriendsCount(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+// // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
+// const getSortedUniqueSkills = users => users.reduce((full, itemOf) => {full.push(...itemOf.skills); return full}, [])
+//                                             .reduce((alluniq, itemOf) => {return alluniq.includes(itemOf) ? alluniq : [...alluniq, itemOf]}, []).sort();
+// console.log(getSortedUniqueSkills(users));
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud',
+// © 2021 GitHub, Inc.
