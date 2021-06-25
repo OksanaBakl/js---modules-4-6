@@ -843,13 +843,13 @@ const users = [
 //============================== task44 ====================================
 
 // Пиши код ниже этой строки
-const getTotalBalanceByGender = (users, gender) => {
-  return [...users]
-    .filter(itemOf => itemOf.gender == gender)
-    .reduce((summ, itemOf) => summ + itemOf.balance, 0);
-};
-// Пиши код выше этой строки
-console.log(getTotalBalanceByGender(users, 'female'));
+// const getTotalBalanceByGender = (users, gender) => {
+//   return [...users]
+//     .filter(itemOf => itemOf.gender == gender)
+//     .reduce((summ, itemOf) => summ + itemOf.balance, 0);
+// };
+// // Пиши код выше этой строки
+// console.log(getTotalBalanceByGender(users, 'female'));
 
 // // Получить массив имен пользователей по полу (поле gender).
 // const getUsersWithGender = (users, gender) =>
@@ -907,4 +907,46 @@ console.log(getTotalBalanceByGender(users, 'female'));
 //                                             .reduce((alluniq, itemOf) => {return alluniq.includes(itemOf) ? alluniq : [...alluniq, itemOf]}, []).sort();
 // console.log(getSortedUniqueSkills(users));
 // // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud',
-// © 2021 GitHub, Inc.
+
+function toCamelCase(str) {
+  // Lower cases the string
+  return (
+    str
+      .toLowerCase()
+      // Replaces any - or _ characters with a space
+      .replace(/[-_]+/g, ' ')
+      // Removes any non alphanumeric characters
+      .replace(/[^\w\s]/g, '')
+      // Uppercases the first character in each group immediately following a space
+      // (delimited by spaces)
+      .replace(/ (.)/g, function ($1) {
+        return $1.toUpperCase();
+      })
+      // Removes spaces
+      .replace(/ /g, '')
+  );
+}
+describe('Tests', () => {
+  it('test', () => {
+    Test.assertEquals(
+      toCamelCase(''),
+      '',
+      'An empty string was provided but not returned',
+    );
+    Test.assertEquals(
+      toCamelCase('the_stealth_warrior'),
+      'theStealthWarrior',
+      "toCamelCase('the_stealth_warrior') did not return correct value",
+    );
+    Test.assertEquals(
+      toCamelCase('The-Stealth-Warrior'),
+      'TheStealthWarrior',
+      "toCamelCase('The-Stealth-Warrior') did not return correct value",
+    );
+    Test.assertEquals(
+      toCamelCase('A-B-C'),
+      'ABC',
+      "toCamelCase('A-B-C') did not return correct value",
+    );
+  });
+});
